@@ -1,13 +1,13 @@
-package com.huey.develop_tdd;
+package com.hyoin.blog;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DevelopTddApplication {
+public class BlogApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevelopTddApplication.class, args);
+		SpringApplication.run(BlogApplication.class, args);
 	}
 
 }

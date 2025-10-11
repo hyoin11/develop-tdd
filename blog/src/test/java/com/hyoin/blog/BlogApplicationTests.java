@@ -1,10 +1,10 @@
-package com.huey.develop_tdd;
+package com.hyoin.blog;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DevelopTddApplicationTests {
+class BlogApplicationTests {
 
 	@Test
 	void contextLoads() {
