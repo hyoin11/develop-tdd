@@ -22,7 +22,6 @@ class UserRepositoryTest {
                 .email("test@email.com")
                 .password("1234")
                 .nickname("test")
-                .status(User.Status.ACTIVE)
                 .build();
 
         // when
