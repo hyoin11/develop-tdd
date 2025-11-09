@@ -22,8 +22,6 @@ import java.time.LocalDateTime;
 @Table(name = "users")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-@Builder
 public class User {
 
     @Id
@@ -36,7 +34,7 @@ public class User {
     @Column(nullable = false, length = 255)
     private String password;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, unique = true, length = 50)
     private String nickname;
 
     @Enumerated(EnumType.STRING)
@@ -53,6 +51,14 @@ public class User {
 
     public enum Status {
         ACTIVE, INACTIVE
+    }
+
+    @Builder
+    public User(String email, String password, String nickname) {
+        this.email = email;
+        this.password = password;
+        this.nickname = nickname;
+        this.status = Status.ACTIVE;
     }
 
     public void deactivate() {
